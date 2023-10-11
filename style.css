@@ -10,7 +10,20 @@
     background-color: #E1C699
     ;
 }
-
+.container{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 50px;
+}
+.menu{
+    position: absolute;
+    width: 1024px;
+    height: 576px;
+    display: flex;
+    flex-direction: column;
+}
 .title{
     font-size: 50px;
     text-align: center;
@@ -24,7 +37,7 @@ h1{
 }
 
 button{
-    color: grey;
+    color: rgb(164, 164, 164);
     outline:0; 
     background:#fff;
     border:none;
@@ -57,7 +70,7 @@ button{
 button:hover{
     transform: scale(1.1) perspective(1px);
     color:#222;
-
+    background-color: rgb(237, 237, 237);
   }
 .playButton button:active{
     color:#222;
@@ -72,6 +85,10 @@ button:hover{
 .credit{
     position:fixed;
     bottom:20px;
-    right:30px;
-    
+    right:30px;   
+}
+
+canvas{
+    width: 100%;
+    margin-top:35px;     
 }
