@@ -26,4 +26,7 @@ Game Rules: In a single turn, the player repeatedly rolls a die until a 1 is rol
             This game continues this way until a player reaches 100 total points. Then the game is over.
 
 Game Mechanics: Each turn, the player is given two buttons: keep rolling! or hold!, the player will get to choose one of these two options.
+
+
+Play vs AI to be added
           
