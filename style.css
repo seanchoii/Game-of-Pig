@@ -1,3 +1,9 @@
+/* Course: SENG 513 */
+/* Date: OCT 20, 2023 */
+/* Assignment 2 */
+/* Name: Sean Choi */
+/* UCID: 30121940 */
+
 @font-face {
     font-family: myFont;
      src: url("assets/TmonMonsori.ttf");
@@ -98,7 +104,53 @@ h1{
     display:none;
     justify-content: center;
 }
+.p1{
+    position:fixed;
+    top:25px;
+    left:30px;
+}
+.p1Score{
+   position: fixed;
+   top:60px;
+   left:30px;
+   width:20%;
+   background-color: rgb(163, 163, 163);
+}
 
+.p1ScoreValue{
+    width:0%;
+    height:30px;
+    background: red;
+    text-align: right;
+    line-height: 30px;
+    color:white;
+}
+
+.p2{
+    position:fixed;
+    top:25px;
+    right:30px;
+}
+.p2Score{
+    position: fixed;
+    top:60px;
+    right:30px;
+    width:20%;
+    background-color: rgb(163, 163, 163);
+ }
+ 
+ .p2ScoreValue{
+     width:0%;
+     height:30px;
+     background: blue;
+     text-align: right;
+     line-height: 30px;
+     color:white;
+ }
+
+.turn{
+   margin-top: 150px; 
+}
 .dice{
     position: absolute;
     top:250px;
