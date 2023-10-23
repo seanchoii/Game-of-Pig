@@ -16,8 +16,11 @@ Game Genre: Strategy
 Game Objective: Each player takes turns rolling a single die and the roll results are added to the score, the goal for each player is to reach 100 points before the other player does.
 
 Game Rules: In a single turn, the player repeatedly rolls a die until a 1 is rolled or the player decides 
+          
           - If the player rolls a 1, they score nothing and it becomes next player's turn
+          
           - If the player rolls another number, it is added to their turn total and the player's turn continues
+          
           - If the player decides to hold, their turn is over and their turn total is added to the total score
 
             This game continues this way until a player reaches 100 total points. Then the game is over.
