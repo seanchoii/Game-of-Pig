@@ -19,26 +19,31 @@
     <div class = "container" id ="container">
         <div class="menu" id ="menu">
             <div class = "title"><h1>Sean's Pig Game</h1>
-                <div class = "imageContainer"><img alt = "" src = "assets/pig.png">
+                <div class = "imageContainer">
+                    <img alt = "" src = "assets/pig.png">
                     <img alt = "" src = "assets/dice.png">
                 </div>
             </div>             
             <div class = "playButton" id ="playButton"> <button>Play</button></div>
-            <div class = "playButton" style="margin-top:35px;"><button>How to Play</button></div>
+            <div class = "playButton" style="margin-top:35px;"><button id = "howToPlay">How to Play</button></div>
         </div>
         <div class = "credit"><p>Made by Sean Choi</p></div>
         
     
         <div class = "game" id = "game">
             
-            <div class = "turn"><p>Player 1's Turn</p></div>
+            <div class = "turn" id = "turn">
+                <p id = "turnPlayer">Player 1's Turn</p>
+                <small>Turn Score:</small>
+                <small id = "turnScore">0</small>
+            </div>
             <div class = "dice"><table>
                 <tr>
-                    <td><img alt="" src="assets/dice-six-faces-3.png" style="width:100px"> </td> 
+                    <td><img alt="" src="assets/dice-six-faces-1.png" style="width:100px" id = "diceImg"> </td> 
                 </tr>
                 </table></div>
                 <div class = "gameButtons">
-                    <button class = "keepRoll" id = "keepRollButton">Keep Rolling!</button>
+                    <button class = "keepRoll" id = "keepRollButton" onclick="diceRandom()">Keep Rolling!</button>
                     <button class = "holdRoll" id = "holdRollButton">Hold!</button>
                 </div>
         </div>
@@ -48,15 +53,17 @@
         <div class = "p1">Player 1</div>
         <div class = "p2">Player 2</div>
         <div class = "p1Score">
-            <div class ="p1ScoreValue" id = "p1Score">0</div>
+            <div class ="p1ScoreValue" id = "p1Score"></div>
+            <p id = "p1ScoreNum" class = "scoreNum">0</p>
         </div>
         <div class = "p2Score">
-            <div class ="p2ScoreValue">0</div>
+            <div class ="p2ScoreValue"></div>
+            <p id = "p2ScoreNum" class = "scoreNum">0</p>
         </div>
     </div>
     
     <div class = "howToPlay">
-        <small class = "howToPlayText"><br>This is a game of Pig!<br><br>
+        <small class = "howToPlayText" id = "howToPlayText"><br>This is a game of Pig!<br><br>
             Each player takes turns rolling a single die and <br>
             the roll results are added to the score. <br> <br>
             Each player takes turns rolling a single die <br>
@@ -70,6 +77,9 @@
             This game continues this way until a player reaches <br>
             100 total points. Then the game is over.
         </small>
+    </div>
+    <div id = "pigPicture" style = "display: none;">
+        <img src = "assets/pig2.png" alt = "" class = "pigPicture2">
     </div>
         <script src="index.js"></script>
 </body>
