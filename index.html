@@ -44,7 +44,7 @@
                 </table></div>
                 <div class = "gameButtons">
                     <button class = "keepRoll" id = "keepRollButton" onclick="diceRandom()">Keep Rolling!</button>
-                    <button class = "holdRoll" id = "holdRollButton">Hold!</button>
+                    <button class = "holdRoll" id = "holdRollButton" onclick = "holdRoll()">Hold!</button>
                 </div>
         </div>
     </div>
@@ -80,6 +80,11 @@
     </div>
     <div id = "pigPicture" style = "display: none;">
         <img src = "assets/pig2.png" alt = "" class = "pigPicture2">
+        <div id = "rollOne" style="display: none;">
+            <p class = "rollOneText" id = "rollOneText">Uh oh! You rolled a one!</p>
+            <div class = "bigCircle"></div>
+            <div class = "smallCircle"></div>
+        </div>
     </div>
         <script src="index.js"></script>
 </body>
