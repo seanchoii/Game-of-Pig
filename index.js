@@ -1,3 +1,9 @@
+/* Course: SENG 513 */
+/* Date: Nov 10, 2023 */
+/* Assignment 3 */
+/* Name: Sean Choi */
+/* UCID: 30121940 */
+
 const play = document.getElementById('playButton');
 const game = document.getElementById('game');
 const score = document.getElementById('score');
