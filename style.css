@@ -340,3 +340,10 @@ h1{
     3px 3px 0 0 #000000,
     4px 4px 0 0 #000000;
   }
+
+  .winCondition{
+    display:none;
+    font-size: 150px;
+    text-align: center;
+    line-height: 500px;
+  }

@@ -7,6 +7,11 @@ const holdButton = document.getElementById('holdRollButton');
 const turnScoreText = document.getElementById('turnScore');
 const p1ScoreBar = document.getElementById('p1Score');
 const p2ScoreBar = document.getElementById('p2Score');
+const p1ScoreNum = document.getElementById('p1ScoreNum');
+const p2ScoreNum = document.getElementById('p2ScoreNum');
+const turnPlayerText = document.getElementById('turnPlayer');
+const win = document.getElementById('winText');
+const restartButton = document.getElementById('restartButton');
 
 let diceNum = 1;
 let count = 0;
@@ -85,19 +90,24 @@ function gamePlay(num){
     tScore += num;
     turnScoreText.innerHTML = tScore;
     if(turn === 1){
-        p1ScoreBar.style.background = 
-        'linear-gradient(to right, red 0% ' + p1TotalScore + '% , rgb(244, 134, 134)' + p1TotalScore + '% ' + (p1TotalScore + tScore) + '%, rgb(163, 163, 163) ' + (p1TotalScore + tScore) + '% 100%'; 
+        if((tScore + p1TotalScore >= 100)){
+            winCondition();
+        }else{
+            p1ScoreBar.style.background = 
+            'linear-gradient(to right, red 0% ' + p1TotalScore + '% , rgb(244, 134, 134)' + p1TotalScore + '% ' + (p1TotalScore + tScore) + '%, rgb(163, 163, 163) ' + (p1TotalScore + tScore) + '% 100%'; 
+        }   
     }else{
-        p2ScoreBar.style.background = 
-        'linear-gradient(to right, blue 0% ' + p2TotalScore + '% , rgb(140, 140, 251)' + p2TotalScore + '% ' + (p2TotalScore + tScore) + '%, rgb(163, 163, 163) ' + (p2TotalScore + tScore) + '% 100%'; 
+        if((tScore + p2TotalScore >= 100)){
+            winCondition();
+        }else{
+            p2ScoreBar.style.background = 
+            'linear-gradient(to right, blue 0% ' + p2TotalScore + '% , rgb(140, 140, 251)' + p2TotalScore + '% ' + (p2TotalScore + tScore) + '%, rgb(163, 163, 163) ' + (p2TotalScore + tScore) + '% 100%'; 
+        }
     }
 }
 function switchPlayer(){
-    const turnPlayerText = document.getElementById('turnPlayer');
     const rollOne = document.getElementById('rollOne');
     const rollOneText = document.getElementById('rollOneText');
-    const p1ScoreNum = document.getElementById('p1ScoreNum');
-    const p2ScoreNum = document.getElementById('p2ScoreNum');
 
     if(turn === 1){
         turn = 2;
@@ -136,7 +146,37 @@ function switchPlayer(){
     }
     tScore = 0;
     turnScoreText.innerHTML = tScore;
+}
 
+function winCondition(){
+
+    game.style.display = 'none';
+    score.style.display = 'none';
+    
+    if(turn === 1){
+        win.innerHTML = 'Player 1 Wins!';
+    }else{
+        win.innerHTML = 'Player 2 Wins!';
+    }
+    restartButton.style.display = 'flex';
+    win.style.display = 'block';
+}
+
+function restart(){
+    tScore = 0;
+    p1TotalScore = 0;
+    p2TotalScore= 0;
+    turn = 1;
+    turnScoreText.innerHTML = tScore;
+    p1ScoreNum.innerHTML = '0';
+    p2ScoreNum.innerHTML = '0';
+    turnPlayerText.innerHTML = "Player 1's Turn";
+    p1ScoreBar.style.background = 'linear-gradient(to right, red 0% 0%, rgb(244, 134, 134) 0% 0% ,rgb(163, 163, 163) 0% 100%)';
+    p2ScoreBar.style.background = 'linear-gradient(to right, blue 0% 0%, rgb(140, 140, 251) 0% 0% ,rgb(163, 163, 163) 0% 100%)';
+    game.style.display = 'flex';
+    score.style.display = 'flex';
+    win.style.display = 'none';
+    restartButton.style.display = 'none'
 }
 
 
