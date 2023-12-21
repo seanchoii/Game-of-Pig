@@ -1,4 +1,4 @@
-# SENG513Game
+# Game of Pig
 Name: Sean Choi
 UCID: 30121940
 Lab Section: L07
